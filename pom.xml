@@ -90,12 +90,7 @@
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
-	    <dependency>
-    <groupId>net.sourceforge.cobertura</groupId>
-    <artifactId>cobertura</artifactId>
-    <version>2.1.1</version>
-    <scope>test</scope>
-</dependency>
+	  
 		
 				<!-- LOGGING -->
 		<dependency>
@@ -159,7 +154,12 @@
 			<artifactId>xml-security-impl</artifactId>
 			<version>1.0</version>
 		</dependency>
-
+<dependency>
+    <groupId>net.sourceforge.cobertura</groupId>
+    <artifactId>cobertura</artifactId>
+    <version>2.1.1</version>
+    <scope>test</scope>
+</dependency>
 
 		</dependencies>
 
