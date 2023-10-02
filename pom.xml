@@ -205,11 +205,6 @@
         <version>2.19.1</version>
       </plugin>
         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.7</version>
-        </plugin>
-    </plugins>
 </reporting>
   
       <profiles>
@@ -381,6 +376,26 @@
                     </plugin>
                 </plugins>
             </build>
+		<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId>
+            <version>2.7</version>
+            <configuration>
+                <!-- specify the source directories -->
+                <sourceDirectories>
+                    <sourceDirectory>src/main/java</sourceDirectory>
+                </sourceDirectories>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>cobertura</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
         </profile>
         <profile>
             <id>maven2</id>
