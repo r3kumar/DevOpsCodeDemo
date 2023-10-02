@@ -90,7 +90,6 @@
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
-	  
 		
 				<!-- LOGGING -->
 		<dependency>
@@ -154,12 +153,7 @@
 			<artifactId>xml-security-impl</artifactId>
 			<version>1.0</version>
 		</dependency>
-<dependency>
-    <groupId>net.sourceforge.cobertura</groupId>
-    <artifactId>cobertura</artifactId>
-    <version>2.1.1</version>
-    <scope>test</scope>
-</dependency>
+
 
 		</dependencies>
 
@@ -210,8 +204,8 @@
         <artifactId>maven-surefire-report-plugin</artifactId>
         <version>2.19.1</version>
       </plugin>
-        <plugin>
-</reporting>
+    </plugins>
+  </reporting>
   
       <profiles>
         <profile>
@@ -382,26 +376,6 @@
                     </plugin>
                 </plugins>
             </build>
-		<plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.7</version>
-            <configuration>
-                <!-- specify the source directories -->
-                <sourceDirectories>
-                    <sourceDirectory>src/main/java</sourceDirectory>
-                </sourceDirectories>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>cobertura</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
         </profile>
         <profile>
             <id>maven2</id>
